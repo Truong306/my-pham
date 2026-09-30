@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow & Bloom - Beauty Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🌸 GLOW & BLOOM</h1>
+
+    <input type="text" id="searchInput"
+           placeholder="Tìm kiếm mỹ phẩm...">
+
+    <button onclick="searchProduct()">Tìm kiếm</button>
+
+    <button onclick="openCart()">
+        🛒 Giỏ hàng (<span id="cartCount">0</span>)
+    </button>
+</header>
+
+<nav>
+    <a href="#" onclick="filterProducts('Tất cả')">Tất cả</a>
+    <a href="#" onclick="filterProducts('Chăm sóc da')">Chăm sóc da</a>
+    <a href="#" onclick="filterProducts('Chống nắng')">Chống nắng</a>
+    <a href="#" onclick="filterProducts('Trang điểm')">Trang điểm</a>
+    <a href="#" onclick="filterProducts('Chăm sóc môi')">Chăm sóc môi</a>
+</nav>
+
+<section class="banner">
+    <h2>CHĂM DA DỊU DÀNG – RẠNG RỠ MỖI NGÀY</h2>
+    <p>Khám phá bộ sưu tập mỹ phẩm dành cho bạn.</p>
+    <a href="#products">MUA SẮM NGAY</a>
+</section>
+
+<main>
+    <h2>Sản phẩm nổi bật</h2>
+    <div id="products" class="product-list"></div>
+</main>
+
+<div id="productModal" class="modal">
+    <div class="modal-content">
+        <button onclick="closeDetail()">✖</button>
+        <div id="productDetail"></div>
+    </div>
+</div>
+
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+        <button onclick="closeCart()">✖</button>
+        <h2>🛒 Giỏ hàng của bạn</h2>
+        <div id="cartItems"></div>
+        <h3>Tổng tiền: <span id="total">0đ</span></h3>
+        <button onclick="checkout()">Đặt hàng</button>
+    </div>
+</div>
+
+<footer>
+    <h3>GLOW & BLOOM BEAUTY STORE</h3>
+    <p>Chăm sóc sắc đẹp – Tỏa sáng theo cách riêng của bạn.</p>
+    <p>© 2026 Glow & Bloom</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
